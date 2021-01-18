@@ -1,13 +1,53 @@
+:root {
+  /* root colours and fonts go there */
+  /* light grey */
+  --colour-1: hsl(0, 0%, 89%);
+
+  /* white */
+  --colour-2: hsl(0, 0%, 100%);
+
+  /* red */
+  --colour-3: hsl(1.7, 84.6%, 51.8%);
+
+  /* dark grey */
+  --colour-4: hsl(0, 0%, 26.7%);
+
+  /* white */
+  --colour-5: hsl(0, 0%, 100%);
+
+  /* black */
+  --colour-6: hsl(0, 0%, 5.9%);
+
+  --title-font: "Orbitron", sans-serif;
+  --info-font: "Aldrich", sans-serif;
+}
+
+.light-theme {
+  --background-clr: hsl(208, 31%, 77%);
+}
+
+.dark-theme {
+  --background-clr: hsl(224.2, 17.1%, 21.8%);
+}
+
+/* body {
+  background-color: var(--background-clr);
+  text-align: center;
+  margin: 0;
+  -webkit-font-smoothing: antiagented;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
