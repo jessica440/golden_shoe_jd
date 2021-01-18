@@ -47,9 +47,10 @@ export const NavBar = () => {
             <Li>
               <Link to="/contact">CONTACT</Link>
             </Li>
-          </InlineDiv>
-          <Li>Basket</Li>
-        </Ul>
+
+            <Li>Basket</Li>
+          </Ul>
+        </InlineDiv>
       </StyledNavBar>
     </ThemeProvider>
   );

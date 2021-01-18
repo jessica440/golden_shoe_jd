@@ -1,6 +1,10 @@
-import basket from "./images/basketicon.svg";
+import basket from "./images/basketicon";
 import "./App.css";
 import NavBar from "./components/NavBar.js";
+import HomePage from "./pages/homePage";
+import { Products, Product } from "./pages/productPage";
+import Contact from "./pages/contactPage";
+import About from "./pages/returnsDeliveryPage";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 function App() {
