@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Link, useHistory } from "react-router-dom";
 import { navBarTheme } from "./themes";
+import { ThemeProvider } from "styled-components";
 
 export const StyledNavBar = styled.nav`
   background-color: var(--colour-3);
@@ -22,13 +24,34 @@ const Li = styled.li`
   width: 50%;
 `;
 
+const InlineDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
 export const NavBar = () => {
   return (
-    <StyledNavBar>
-      <Ul>
-        <Li>Hello!</Li>
-      </Ul>
-    </StyledNavBar>
+    <ThemeProvider theme={navBarTheme}>
+      <StyledNavBar>
+        <InlineDiv>
+          <Ul>
+            <Li>
+              <Link to="/">HOME</Link>
+            </Li>
+            <Li>
+              <Link to="/products">PRODUCTS</Link>
+            </Li>
+            <Li>
+              <Link to="/about">ABOUT</Link>
+            </Li>
+            <Li>
+              <Link to="/contact">CONTACT</Link>
+            </Li>
+          </InlineDiv>
+          <Li>Basket</Li>
+        </Ul>
+      </StyledNavBar>
+    </ThemeProvider>
   );
 };
 
