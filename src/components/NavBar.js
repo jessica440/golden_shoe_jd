@@ -47,8 +47,6 @@ export const NavBar = () => {
             <Li>
               <Link to="/contact">CONTACT</Link>
             </Li>
-
-            <Li>Basket</Li>
           </Ul>
         </InlineDiv>
       </StyledNavBar>
