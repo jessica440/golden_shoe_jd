@@ -1,20 +1,20 @@
-import basket from "./images/basketicon";
+// import basket from "./images/basketicon";
 import "./App.css";
-import NavBar from "./components/NavBar.js";
 import HomePage from "./pages/homePage";
-// import { Products, Product } from "./pages/productPage";
+import { Products } from "./pages/productPage";
 import Contact from "./pages/contactPage";
 // import About from "./pages/returnsDeliveryPage";
 import {
   BrowserRouter,
   Switch,
   Route,
-  Link,
-  useHistory,
+  // Link,
+  // useHistory,
 } from "react-router-dom";
+import NotFoundPage from "./pages/pageNotFound";
 
 function App() {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <BrowserRouter>
@@ -23,13 +23,16 @@ function App() {
           <HomePage />
         </Route>
         <Route path="/products" exact>
-          {/* <Products /> */}
+          <Products />
         </Route>
         <Route path="/about" exact>
           {/* <About /> */}
         </Route>
         <Route path="/contact" exact>
           <Contact />
+        </Route>
+        <Route>
+          <NotFoundPage />
         </Route>
       </Switch>
     </BrowserRouter>
