@@ -5,7 +5,7 @@ import HomePage from "./pages/homePage";
 import { Products, Product } from "./pages/productPage";
 import Contact from "./pages/contactPage";
 import About from "./pages/returnsDeliveryPage";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link, useHistory } from "react-router-dom";
 
 function App() {
   const history = useHistory();
