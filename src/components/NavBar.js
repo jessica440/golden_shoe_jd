@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { navBarTheme } from "./themes";
 import { ThemeProvider } from "styled-components";
+// import Basket from "./../images/basketicon";
 
 const StyledNavBar = styled.nav`
   background-color: var(--colour-1);
@@ -13,6 +14,8 @@ const StyledNavBar = styled.nav`
   list-style-type: none;
   margin-bottom: 4rem;
   width: 100%;
+  /* display: flex;
+  justify-content: space-evenly; */
 `;
 
 const Ul = styled.ul`
@@ -24,7 +27,7 @@ const Li = styled.li`
   font-size: 2rem;
   list-style-type: none;
   display: inline-block;
-  padding: 1rem;
+  padding-left: 8rem;
 `;
 
 const InlineDiv = styled.div`

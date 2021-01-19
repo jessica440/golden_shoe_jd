@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import NavBar from "./../components/NavBar";
+import Container from "./../components/Form";
 
 const NotFoundPage = () => {
   return (
     <>
       <NavBar />
-      <h1>Page not found</h1>
+      <Container>
+        <h1>Page not found</h1>
+      </Container>
     </>
   );
 };

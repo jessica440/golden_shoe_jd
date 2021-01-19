@@ -5,6 +5,7 @@ import React from "react";
 // import { ThemeProvider } from "styled-components";
 // import { Container } from "../components/Form";
 import NavBar from "./../components/NavBar";
+import Container from "./../components/Form";
 
 // const Product = () => {
 //   return (
@@ -18,7 +19,9 @@ export const Products = () => {
   return (
     <>
       <NavBar />
-      <h1>Products Page</h1>;
+      <Container>
+        <h1>Products Page</h1>
+      </Container>
     </>
   );
 };
