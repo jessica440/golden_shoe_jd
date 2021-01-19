@@ -16,20 +16,20 @@ const StyledNavBar = styled.nav`
 `;
 
 const Ul = styled.ul`
-  padding-left: 0;
+  padding: 0;
 `;
 
 const Li = styled.li`
   font-family: var(--info-font);
-  font-size: 1.2rem;
+  font-size: 2rem;
   list-style-type: none;
   display: inline-block;
-  width: 50%;
+  padding: 1rem;
 `;
 
 const InlineDiv = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 
 const NavBar = () => {

@@ -3,7 +3,7 @@ import "./App.css";
 import HomePage from "./pages/homePage";
 import { Products } from "./pages/productPage";
 import Contact from "./pages/contactPage";
-// import About from "./pages/returnsDeliveryPage";
+import About from "./pages/returnsDeliveryPage";
 import {
   BrowserRouter,
   Switch,
@@ -26,7 +26,7 @@ function App() {
           <Products />
         </Route>
         <Route path="/about" exact>
-          {/* <About /> */}
+          <About />
         </Route>
         <Route path="/contact" exact>
           <Contact />
