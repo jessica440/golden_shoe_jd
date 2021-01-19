@@ -1,6 +1,6 @@
 import React from "react";
 // import styled from "styled-components";
-// import { Link, useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 // import { navBarTheme } from "../themes";
 // import { ThemeProvider } from "styled-components";
 // import { Container } from "../components/Form";
@@ -16,6 +16,8 @@ import Container from "./../components/Form";
 // };
 
 export const Products = () => {
+  // const history = useHistory();
+  // history.push("/");
   return (
     <>
       <NavBar />
