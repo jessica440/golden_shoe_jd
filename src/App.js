@@ -1,33 +1,38 @@
-import basket from "./images/basketicon";
+// import basket from "./images/basketicon";
 import "./App.css";
-import NavBar from "./components/NavBar.js";
 import HomePage from "./pages/homePage";
-import { Products, Product } from "./pages/productPage";
+import { Products } from "./pages/productPage";
 import Contact from "./pages/contactPage";
-import About from "./pages/returnsDeliveryPage";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+// import About from "./pages/returnsDeliveryPage";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  // Link,
+  // useHistory,
+} from "react-router-dom";
+import NotFoundPage from "./pages/pageNotFound";
 
 function App() {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-          <NavBar />
           <HomePage />
         </Route>
         <Route path="/products" exact>
-          <NavBar />
           <Products />
         </Route>
         <Route path="/about" exact>
-          <NavBar />
-          <About />
+          {/* <About /> */}
         </Route>
         <Route path="/contact" exact>
-          <NavBar />
           <Contact />
+        </Route>
+        <Route>
+          <NotFoundPage />
         </Route>
       </Switch>
     </BrowserRouter>

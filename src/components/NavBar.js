@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, useHistory } from "react-router-dom";
+import {
+  Link,
+  // useHistory
+} from "react-router-dom";
 import { navBarTheme } from "./themes";
 import { ThemeProvider } from "styled-components";
 
-export const StyledNavBar = styled.nav`
-  background-color: var(--colour-3);
-  padding: 0
+const StyledNavBar = styled.nav`
+  background-color: var(--colour-1);
+  padding: 0;
   list-style-type: none;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 4rem;
   width: 100%;
 `;
 
@@ -29,7 +32,7 @@ const InlineDiv = styled.div`
   justify-content: space-between;
 `;
 
-export const NavBar = () => {
+const NavBar = () => {
   return (
     <ThemeProvider theme={navBarTheme}>
       <StyledNavBar>
