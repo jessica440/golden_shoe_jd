@@ -2,10 +2,16 @@ import basket from "./images/basketicon";
 import "./App.css";
 import NavBar from "./components/NavBar.js";
 import HomePage from "./pages/homePage";
-import { Products, Product } from "./pages/productPage";
+// import { Products, Product } from "./pages/productPage";
 import Contact from "./pages/contactPage";
-import About from "./pages/returnsDeliveryPage";
-import { BrowserRouter, Switch, Route, Link, useHistory } from "react-router-dom";
+// import About from "./pages/returnsDeliveryPage";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useHistory,
+} from "react-router-dom";
 
 function App() {
   const history = useHistory();
@@ -14,19 +20,15 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-          <NavBar />
           <HomePage />
         </Route>
         <Route path="/products" exact>
-          <NavBar />
-          <Products />
+          {/* <Products /> */}
         </Route>
         <Route path="/about" exact>
-          <NavBar />
-          <About />
+          {/* <About /> */}
         </Route>
         <Route path="/contact" exact>
-          <NavBar />
           <Contact />
         </Route>
       </Switch>
