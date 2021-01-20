@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -6,98 +6,117 @@ export const Container = styled.div`
   text-align: center;
 `;
 
-// const Fieldset = styled.fieldset`
-//   color: ${(props) => props.theme.formColor};
-//   border-style: solid;
-//   padding: 0.75rem;
-//   border-radius: 5px;
-//   display: flex;
-//   justify-content: space-around;
-//   flex-direction: column;
-//   border-color: ${(props) => props.theme.formColor};
-// `;
+const Button = styled.button`
+  font-size: 1rem;
+  font-weight: bold;
+`;
 
-// export const Label = styled.label`
-//   font-family: var(--info-font);
-//   font-size: 1.2rem;
-//   margin-top: 1ch;
-//   color: ${(props) => props.theme.labelColor};
-// `;
+const Fieldset = styled.fieldset`
+  border-style: solid;
+  padding: 0.75rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  /* border-color: ${(props) => props.theme.formColor}; */
+`;
 
-// const Input = styled.input`
-//   font-family: var(--info-font);
-//   margin: 1ch;
-//   font-size: 1.2rem;
-//   padding: 0.2rem;
-//   color: ${(props) => props.theme.formColor};
-//   background: transparent;
-//   border-radius: 5px;
-//   text-align: center;
-//   border-color: ${(props) => props.theme.formColor};
-//   scrollbar-arrow-color: ${(props) => props.theme.formColor};
-// `;
+const Label = styled.label`
+  font-family: var(--info-font);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  /* color: ${(props) => props.theme.labelColor}; */
+`;
+
+const Input = styled.input`
+  /* font-family: var(--info-font); */
+  margin: 1ch;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  /* color: ${(props) => props.theme.formColor}; */
+  background: transparent;
+  border-radius: 5px;
+  text-align: center;
+  /* border-color: ${(props) => props.theme.formColor};
+  scrollbar-arrow-color: ${(props) => props.theme.formColor}; */
+`;
+
+const Select = styled.select`
+  margin: 1ch;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  border-radius: 5px;
+  text-align: center;
+`;
 
 // const Select = styled.select`
 //   font-family: var(--info-font);
-//   margin: 1ch;
+//   margin: 1rem;
 //   font-size: 1.2rem;
 //   padding: 0.2rem;
-//   color: ${(props) => props.theme.formColor};
+//   /* color: ${(props) => props.theme.formColor}; */
 //   background: transparent;
 //   border-radius: 5px;
 //   text-align: center;
-//   border-color: ${(props) => props.theme.formColor};
+//   /* border-color: ${(props) => props.theme.formColor}; */
 // `;
 
-// const Option = styled.option`
-//   background-color: ${(props) => props.theme.optionColor};
-//   color: ${(props) => props.theme.btnTextColor};
-// `;
+// const Option = styled.option``;
+// //   background-color: ${(props) => props.theme.optionColor};
+// //   color: ${(props) => props.theme.btnTextColor};
+// // `;
 
 // const ErrorDiv = styled.div`
-//   font-family: var(--info-font);
-//   color: ${(props) => props.theme.errorMessageColor};
+//   /* font-family: var(--info-font);
+//   color: ${(props) => props.theme.errorMessageColor}; */
 //   margin-left: 1ch;
 //   margin-right: 1ch;
 // `;
 
-// const Form = styled.form`
-//   width: 60%;
-//   margin: 5vh auto;
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-// `;
+const Form = styled.form`
+  width: 60%;
+  margin: 5vh auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
 
-// export const ReturnsForm = () => {
-//   return (
-//     <Form onSubmit={(event) => handleSubmit(event)}>
-//       <Fieldset>
-//         <Label htmlFor="agent">Agent:</Label>
-//         <Input
-//           id="agent"
-//           type="text"
-//           placeholder="BrownFox"
-//           data-cy="agent"
-//           maxLength="8"
-//           required
-//         />
-//         <ErrorDiv>{errorMessage}</ErrorDiv>
-//         <Label htmlFor="age">Age:</Label>
-//         <Input
-//           id="age"
-//           type="number"
-//           min="8"
-//           max="18"
-//           placeholder="8"
-//           required
-//         />
-//         <Label htmlFor="country">Location:</Label>
-//         <Countries id="country" required />
-//       </Fieldset>
-//       <Button>CLICK HERE TO BUILD YOUR PROFILE</Button>
-//     </Form>
-//   );
-// };
+export const ReturnsForm = () => {
+  return (
+    <Form>
+      <Fieldset>
+        <Label htmlFor="orderNumber">Order Number:</Label>
+        <Input
+          id="orderNumber"
+          type="text"
+          placeholder="e.g. 1002871"
+          data-cy="orderNumber"
+          maxLength="7"
+          required
+        />
 
-export default Container;
+        <Label htmlFor="quantity">Quantity:</Label>
+        <Input
+          id="quantity"
+          type="number"
+          min="1"
+          max="15"
+          placeholder="1"
+          required
+        />
+        <Label htmlFor="reason">Returns Reason:</Label>
+        <Select id="reason" name="reason">
+          <option value="late">Arrived too late</option>
+          <option value="incorrect">Incorrect item received</option>
+          <option value="different">Looks different to image on site</option>
+          <option value="multiple">Ordered multiple sizes</option>
+          <option value="fit">Didn't fit</option>
+          <option value="dislike">Didn't like</option>
+        </Select>
+      </Fieldset>
+      <Button>CLICK HERE TO GENERATE YOUR RETURNS LABEL</Button>
+    </Form>
+  );
+};
+
+export default ReturnsForm;
