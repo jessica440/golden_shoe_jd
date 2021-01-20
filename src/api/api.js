@@ -1,3 +1,5 @@
+const url = process.env.REACT_APP_DB_URL;
+
 function request(path, options) {
   return fetch(url + path, options).then((response) => {
     if (!response.ok && response.status !== 409) {
@@ -25,4 +27,4 @@ function returns(orderNumber, quantity, reason) {
   });
 }
 
-export default returns;
+export { returns };

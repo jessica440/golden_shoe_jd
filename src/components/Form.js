@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { returns } from "./../api/api";
+import { useHistory } from "react-router-dom";
 
 export const Container = styled.div`
   padding: 3rem;
@@ -82,7 +83,7 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-export const ReturnsForm = () => {
+export const ReturnsForm = ({ orderNumber, setOrderNumber }) => {
   const history = useHistory();
   const [errorMessage, setErrorMessage] = React.useState("");
   const handleSubmit = (event) => {
@@ -90,7 +91,7 @@ export const ReturnsForm = () => {
     const orderNumber = event.target.elements.orderNumber.value;
     const quantity = event.target.elements.quantity.value;
     const reason = event.target.elements.reason.value;
-    signUp(orderNumber, quantity, reason)
+    returns(orderNumber, quantity, reason)
       .then((res) => {
         if (res.id) {
           window.sessionStorage.setItem("user_id", res.id);
