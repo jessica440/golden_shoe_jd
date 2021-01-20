@@ -1,10 +1,11 @@
 import React from "react";
 // import styled from "styled-components";
-// import { Link, useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 // import { navBarTheme } from "../themes";
 // import { ThemeProvider } from "styled-components";
 // import { Container } from "../components/Form";
 import NavBar from "./../components/NavBar";
+import Container from "./../components/Form";
 
 // const Product = () => {
 //   return (
@@ -15,10 +16,14 @@ import NavBar from "./../components/NavBar";
 // };
 
 export const Products = () => {
+  // const history = useHistory();
+  // history.push("/");
   return (
     <>
       <NavBar />
-      <h1>Products Page</h1>;
+      <Container>
+        <h1>Products Page</h1>
+      </Container>
     </>
   );
 };
