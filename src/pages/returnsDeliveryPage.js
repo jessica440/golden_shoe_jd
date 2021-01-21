@@ -3,19 +3,23 @@ import styled from "styled-components";
 import NavBar from "./../components/NavBar";
 import { Container, ReturnsForm } from "./../components/Form";
 // import { useHistory } from "react-router-dom";
+import { CollapsibleText, Content } from "./../components/Button";
 
-const About = () => {
+const Faqs = () => {
   //   const history = useHistory();
   //   history.push("/");
   return (
     <>
       <NavBar />
       <Container>
-        <h1>FAQs</h1>
+        <CollapsibleText>Button</CollapsibleText>
+        <Content>
+          <h1>FAQs</h1>
+        </Content>
         <ReturnsForm />
       </Container>
     </>
   );
 };
 
-export default About;
+export default Faqs;

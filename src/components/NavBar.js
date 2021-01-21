@@ -12,6 +12,10 @@ const StyledNavBar = styled.nav`
   margin-bottom: 4rem;
   width: 100%;
   /* display: flex;
+  @media (max-width: 1035px) {
+    flex-direction: column;
+  } */
+  /* display: flex;
   justify-content: space-evenly; */
 `;
 

@@ -12,6 +12,10 @@ const Button = styled.button`
   font-weight: bold;
 `;
 
+const InfoButton = styled.button`
+  width: 1.5rem;
+`;
+
 const Fieldset = styled.fieldset`
   border-style: solid;
   padding: 0.75rem;
@@ -92,6 +96,15 @@ export const ReturnsForm = () => {
     <Form onSubmit={(event) => handleSubmit(event)}>
       <Fieldset>
         <Label htmlFor="orderNumber">Order Number:</Label>
+        <InfoButton
+          onClick={() =>
+            alert(
+              "Your Order Number is the 7 digit number at the top of your invoice"
+            )
+          }
+        >
+          ?
+        </InfoButton>
         <Input
           id="orderNumber"
           type="text"
