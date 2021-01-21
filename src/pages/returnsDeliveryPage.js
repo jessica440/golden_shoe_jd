@@ -12,7 +12,7 @@ const Faqs = () => {
     <>
       <NavBar />
       <Container>
-        <CollapsibleText>Button</CollapsibleText>
+        <CollapsibleText />
         <Content>
           <h1>FAQs</h1>
         </Content>
