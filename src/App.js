@@ -4,6 +4,7 @@ import HomePage from "./pages/homePage";
 import { Products } from "./pages/productPage";
 import Contact from "./pages/contactPage";
 import About from "./pages/returnsDeliveryPage";
+import ReturnsLabel from "./pages/returnsLabel";
 import {
   BrowserRouter,
   Switch,
@@ -25,11 +26,17 @@ function App() {
         <Route path="/products" exact>
           <Products />
         </Route>
-        <Route path="/about" exact>
+        <Route path="/faqs" exact>
           <About />
         </Route>
         <Route path="/contact" exact>
           <Contact />
+        </Route>
+        {/* <Route path="/about" exact>
+          <About />
+        </Route> */}
+        <Route path="/label" exact>
+          <ReturnsLabel />
         </Route>
         <Route>
           <NotFoundPage />

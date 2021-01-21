@@ -11,7 +11,7 @@ const About = () => {
     <>
       <NavBar />
       <Container>
-        <h1>About</h1>
+        <h1>FAQs</h1>
         <ReturnsForm />
       </Container>
     </>
