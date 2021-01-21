@@ -91,23 +91,24 @@ export const ReturnsForm = ({ orderNumber, setOrderNumber }) => {
     const orderNumber = event.target.elements.orderNumber.value;
     const quantity = event.target.elements.quantity.value;
     const reason = event.target.elements.reason.value;
-    returns(orderNumber, quantity, reason)
-      .then((res) => {
-        if (res.id) {
-          window.sessionStorage.setItem("user_id", res.id);
-          setOrderNumber(orderNumber);
-          history.push("/profile");
-        } else {
-          //ask to pick another
-          console.log(res.message);
-          setErrorMessage(res.message);
-        }
-      })
+    history.push("/label");
+    // returns(orderNumber, quantity, reason)
+    //   .then((res) => {
+    //     if (res.id) {
+    //       window.sessionStorage.setItem("user_id", res.id);
+    //       setOrderNumber(orderNumber);
+    //       history.push("/label");
+    //     } else {
+    //       //ask to pick another
+    //       console.log(res.message);
+    //       setErrorMessage(res.message);
+    //     }
+    //   })
 
-      .catch((error) => console.log(error));
+    //   .catch((error) => console.log(error));
   };
   return (
-    <Form>
+    <Form onSubmit={(event) => handleSubmit(event)}>
       <Fieldset>
         <Label htmlFor="orderNumber">Order Number:</Label>
         <Input
@@ -125,7 +126,7 @@ export const ReturnsForm = ({ orderNumber, setOrderNumber }) => {
           type="number"
           min="1"
           max="15"
-          placeholder="1"
+          placeholder="0"
           required
         />
         <Label htmlFor="reason">Returns Reason:</Label>

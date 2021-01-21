@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Link,
-  // useHistory
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { navBarTheme } from "./themes";
 import { ThemeProvider } from "styled-components";
 // import Basket from "./../images/basketicon";
@@ -48,7 +45,7 @@ const NavBar = () => {
               <Link to="/products">PRODUCTS</Link>
             </Li>
             <Li>
-              <Link to="/about">ABOUT</Link>
+              <Link to="/faqs">FAQs</Link>
             </Li>
             <Li>
               <Link to="/contact">CONTACT</Link>
