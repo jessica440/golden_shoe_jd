@@ -1,12 +1,15 @@
 import React from "react";
-// import styled from "styled-components";
+import styled from "styled-components";
 import NavBar from "./../components/NavBar";
+import Container from "./../components/Form";
 
 const ReturnsLabel = () => {
   return (
     <>
       <NavBar />
-      <h1>Print Out Label</h1>
+      <Container>
+        <h1>Print Out Label</h1>
+      </Container>
     </>
   );
 };

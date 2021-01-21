@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { returns } from "./../api/api";
 import { useHistory } from "react-router-dom";
 
 export const Container = styled.div`
@@ -68,12 +67,12 @@ const Select = styled.select`
 // //   color: ${(props) => props.theme.btnTextColor};
 // // `;
 
-const ErrorDiv = styled.div`
-  /* font-family: var(--info-font);
-  color: ${(props) => props.theme.errorMessageColor}; */
-  margin-left: 1ch;
-  margin-right: 1ch;
-`;
+// const ErrorDiv = styled.div`
+//   /* font-family: var(--info-font);
+//   color: ${(props) => props.theme.errorMessageColor}; */
+//   margin-left: 1ch;
+//   margin-right: 1ch;
+// `;
 
 const Form = styled.form`
   width: 60%;
@@ -83,29 +82,11 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-export const ReturnsForm = ({ orderNumber, setOrderNumber }) => {
+export const ReturnsForm = () => {
   const history = useHistory();
-  const [errorMessage, setErrorMessage] = React.useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
-    const orderNumber = event.target.elements.orderNumber.value;
-    const quantity = event.target.elements.quantity.value;
-    const reason = event.target.elements.reason.value;
     history.push("/label");
-    // returns(orderNumber, quantity, reason)
-    //   .then((res) => {
-    //     if (res.id) {
-    //       window.sessionStorage.setItem("user_id", res.id);
-    //       setOrderNumber(orderNumber);
-    //       history.push("/label");
-    //     } else {
-    //       //ask to pick another
-    //       console.log(res.message);
-    //       setErrorMessage(res.message);
-    //     }
-    //   })
-
-    //   .catch((error) => console.log(error));
   };
   return (
     <Form onSubmit={(event) => handleSubmit(event)}>
@@ -119,7 +100,7 @@ export const ReturnsForm = ({ orderNumber, setOrderNumber }) => {
           maxLength="7"
           required
         />
-        <ErrorDiv>{errorMessage}</ErrorDiv>
+
         <Label htmlFor="quantity">Quantity:</Label>
         <Input
           id="quantity"
@@ -144,4 +125,4 @@ export const ReturnsForm = ({ orderNumber, setOrderNumber }) => {
   );
 };
 
-export default ReturnsForm;
+export default Container;
