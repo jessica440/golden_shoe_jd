@@ -96,7 +96,6 @@ export const ReturnsForm = () => {
           id="orderNumber"
           type="text"
           placeholder="e.g. 1002871"
-          data-cy="orderNumber"
           maxLength="7"
           required
         />
@@ -120,7 +119,9 @@ export const ReturnsForm = () => {
           <option value="dislike">Didn't like</option>
         </Select>
       </Fieldset>
-      <Button>CLICK HERE TO GENERATE YOUR RETURNS LABEL</Button>
+      <Container>
+        <Button>CLICK HERE TO GENERATE YOUR RETURNS LABEL</Button>
+      </Container>
     </Form>
   );
 };
