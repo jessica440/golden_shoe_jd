@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ReturnsForm from "../components/Form";
 
 const Button = styled.button`
   font-size: 1rem;
@@ -31,18 +32,33 @@ export const Content = styled.div`
 
 export const CollapsibleText = () => {
   const [seeText, setSeeText] = React.useState(false);
+  const [seeForm, setSeeForm] = React.useState(false);
   const handleSeeText = () => {
     setSeeText(!seeText);
     console.log("activated");
   };
+  const handleSeeForm = () => {
+    setSeeForm(!seeForm);
+  };
   return (
     <>
-      <Button onClick={() => handleSeeText()}>Delivery</Button>
-      {seeText ? (
-        <Content>
-          <h1>Hello!</h1>
-        </Content>
-      ) : null}
+      <Content>
+        <Button onClick={() => handleSeeText()}>Delivery</Button>
+        {seeText ? (
+          <Content>
+            <h1>Hello!</h1>
+          </Content>
+        ) : null}
+      </Content>
+      <Content>
+        <Button onClick={() => handleSeeForm()}>Returns</Button>
+        {seeForm ? (
+          <Content>
+            <h1>Hello!</h1>
+            <ReturnsForm />
+          </Content>
+        ) : null}
+      </Content>
     </>
   );
 };

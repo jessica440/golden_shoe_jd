@@ -3,7 +3,7 @@ import "./App.css";
 import HomePage from "./pages/homePage";
 import { Products } from "./pages/productPage";
 import Contact from "./pages/contactPage";
-import Faqs from "./pages/returnsDeliveryPage";
+import DeliveryReturns from "./pages/returnsDeliveryPage";
 import ReturnsLabel from "./pages/returnsLabel";
 import {
   BrowserRouter,
@@ -26,8 +26,8 @@ function App() {
         <Route path="/products" exact>
           <Products />
         </Route>
-        <Route path="/faqs" exact>
-          <Faqs />
+        <Route path="/deliveryreturns" exact>
+          <DeliveryReturns />
         </Route>
         <Route path="/contact" exact>
           <Contact />
