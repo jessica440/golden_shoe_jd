@@ -21,13 +21,13 @@ export const Content = styled.div`
 //     }
 //   };
 
-const Checkbox = () => {
-  return (
-    <>
-      <input type="checkbox" name="seeText" value="seeText"></input>
-    </>
-  );
-};
+// const Checkbox = () => {
+//   return (
+//     <>
+//       <input type="checkbox" name="seeText" value="seeText"></input>
+//     </>
+//   );
+// };
 
 export const CollapsibleText = () => {
   const [seeText, setSeeText] = React.useState(false);
@@ -45,21 +45,6 @@ export const CollapsibleText = () => {
       ) : null}
     </>
   );
-
-  //   return (
-  //     <>
-  //       <Checkbox
-  //         type="checkbox"
-  //         name="seeText"
-  //         onChange={handleSeeText}
-  //       ></Checkbox>
-  //       {seeText ? (
-  //         <div>
-  //           <label htmlFor="seeText">Hi there</label>
-  //         </div>
-  //       ) : null}
-  //     </>
-  //   );
 };
 
 export default CollapsibleText;

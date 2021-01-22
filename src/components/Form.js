@@ -16,7 +16,7 @@ const InfoButton = styled.button`
   width: 1.5rem;
 `;
 
-const Fieldset = styled.fieldset`
+export const Fieldset = styled.fieldset`
   border-style: solid;
   padding: 0.75rem;
   border-radius: 5px;

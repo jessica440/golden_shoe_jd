@@ -12,10 +12,10 @@ const Faqs = () => {
     <>
       <NavBar />
       <Container>
-        <CollapsibleText />
         <Content>
           <h1>FAQs</h1>
         </Content>
+        <CollapsibleText />
         <ReturnsForm />
       </Container>
     </>
