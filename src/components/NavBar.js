@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { navBarTheme } from "./themes";
 import { ThemeProvider } from "styled-components";
-// import Basket from "./../images/basketicon";
+import Basket from "../images/basketicon.svg";
+import Search from "../images/searchIcon.svg";
 
 const StyledNavBar = styled.nav`
   background-color: var(--colour-1);
@@ -36,10 +37,16 @@ const InlineDiv = styled.div`
   justify-content: space-evenly;
 `;
 
+const Img = styled.img`
+  padding: 1rem;
+`;
+
 const NavBar = () => {
   return (
     <ThemeProvider theme={navBarTheme}>
       <StyledNavBar>
+        <Img src={Basket} />
+        <Img src={Search} />
         <InlineDiv>
           <Ul>
             <Li>
