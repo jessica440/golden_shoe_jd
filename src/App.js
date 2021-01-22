@@ -5,23 +5,19 @@ import { Products } from "./pages/productPage";
 import Contact from "./pages/contactPage";
 import DeliveryReturns from "./pages/returnsDeliveryPage";
 import ReturnsLabel from "./pages/returnsLabel";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  // Link,
-  // useHistory,
-} from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NotFoundPage from "./pages/pageNotFound";
+import Basket from "./pages/basket";
 
 function App() {
-  // const history = useHistory();
-
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
           <HomePage />
+        </Route>
+        <Route path="/basket" exact>
+          <Basket />
         </Route>
         <Route path="/products" exact>
           <Products />
@@ -32,12 +28,10 @@ function App() {
         <Route path="/contact" exact>
           <Contact />
         </Route>
-        {/* <Route path="/about" exact>
-          <About />
-        </Route> */}
         <Route path="/label" exact>
           <ReturnsLabel />
         </Route>
+
         <Route>
           <NotFoundPage />
         </Route>

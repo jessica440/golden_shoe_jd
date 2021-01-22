@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import { returns } from "../api/api";
 
 export const Container = styled.div`
   padding: 3rem;
@@ -88,10 +89,22 @@ const Form = styled.form`
 
 export const ReturnsForm = () => {
   const history = useHistory();
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const returnsForm = {
+      orderNumber: event.target.elements.orderNumber.value,
+      quantity: event.target.elements.quantity.value,
+      reason: event.target.elements.reason.value,
+    };
+
+    returns(returnsForm);
+    console.log(returnsForm);
+
     history.push("/label");
   };
+
   return (
     <Form onSubmit={(event) => handleSubmit(event)}>
       <Fieldset>
@@ -110,6 +123,7 @@ export const ReturnsForm = () => {
           type="text"
           placeholder="e.g. 1002871"
           maxLength="7"
+          // pattern="/\d{7}/"
           required
         />
 

@@ -8,7 +8,7 @@ const Button = styled.button`
 `;
 
 export const Content = styled.div`
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 1rem;
 `;
 
