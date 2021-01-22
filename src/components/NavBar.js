@@ -12,6 +12,7 @@ const StyledNavBar = styled.nav`
   list-style-type: none;
   margin-bottom: 4rem;
   width: 100%;
+
   /* display: flex;
   @media (max-width: 1035px) {
     flex-direction: column;
@@ -25,11 +26,12 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-  font-family: var(--info-font);
+  font-family: var(--title-font);
   font-size: 2rem;
   list-style-type: none;
   display: inline-block;
   padding-left: 8rem;
+  color: var(--colour-2);
 `;
 
 const InlineDiv = styled.div`
@@ -45,7 +47,9 @@ const NavBar = () => {
   return (
     <ThemeProvider theme={navBarTheme}>
       <StyledNavBar>
-        <Img src={Basket} />
+        <Link to="/basket">
+          <Img src={Basket} />
+        </Link>
         <Img src={Search} />
         <InlineDiv>
           <Ul>

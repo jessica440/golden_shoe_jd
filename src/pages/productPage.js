@@ -4,8 +4,6 @@ import NavBar from "./../components/NavBar";
 import { Container } from "./../components/Form";
 
 export const Products = () => {
-  // const history = useHistory();
-  // history.push("/");
   return (
     <>
       <NavBar />
