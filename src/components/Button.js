@@ -8,27 +8,9 @@ const Button = styled.button`
 `;
 
 export const Content = styled.div`
-  font-size: 2rem;
-  /* display: none; */
+  font-size: 1.2rem;
+  padding: 1rem;
 `;
-
-// export const CollapsibleText = () => {
-//   const collapse = () => {
-//     console.log("click");
-//     if (Content.display === "none") {
-//       Content.display = "block";
-//     } else {
-//       Content.display = "none";
-//     }
-//   };
-
-// const Checkbox = () => {
-//   return (
-//     <>
-//       <input type="checkbox" name="seeText" value="seeText"></input>
-//     </>
-//   );
-// };
 
 export const CollapsibleText = () => {
   const [seeText, setSeeText] = React.useState(false);
@@ -46,7 +28,10 @@ export const CollapsibleText = () => {
         <Button onClick={() => handleSeeText()}>Delivery</Button>
         {seeText ? (
           <Content>
-            <h1>Hello!</h1>
+            <p>
+              FREE Standard Delivery on orders over £30 as well as available
+              express delivery options. Please allow up to 5 working Days.
+            </p>
           </Content>
         ) : null}
       </Content>
@@ -54,7 +39,12 @@ export const CollapsibleText = () => {
         <Button onClick={() => handleSeeForm()}>Returns</Button>
         {seeForm ? (
           <Content>
-            <h1>Hello!</h1>
+            <p>
+              You can return items within 28 days of receipt of your order. As
+              always, we offer a range of FREE and easy ways to return including
+              contactless collection from your home. <br />
+              To start a return, please fill in the form below.
+            </p>
             <ReturnsForm />
           </Content>
         ) : null}
