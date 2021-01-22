@@ -1,25 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import NavBar from "./../components/NavBar";
-import { Container, ReturnsForm } from "./../components/Form";
-// import { useHistory } from "react-router-dom";
+import { Container } from "./../components/Form";
+
 import { CollapsibleText, Content } from "./../components/Button";
 
-const Faqs = () => {
-  //   const history = useHistory();
-  //   history.push("/");
+const DeliveryReturns = () => {
   return (
     <>
       <NavBar />
       <Container>
-        <CollapsibleText />
         <Content>
-          <h1>FAQs</h1>
+          <h1>Delivery / Returns</h1>
         </Content>
-        <ReturnsForm />
+        <CollapsibleText />
       </Container>
     </>
   );
 };
 
-export default Faqs;
+export default DeliveryReturns;

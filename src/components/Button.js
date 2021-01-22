@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ReturnsForm from "../components/Form";
 
 const Button = styled.button`
   font-size: 1rem;
@@ -7,59 +8,49 @@ const Button = styled.button`
 `;
 
 export const Content = styled.div`
-  font-size: 2rem;
-  /* display: none; */
+  font-size: 1.2rem;
+  padding: 1rem;
 `;
-
-// export const CollapsibleText = () => {
-//   const collapse = () => {
-//     console.log("click");
-//     if (Content.display === "none") {
-//       Content.display = "block";
-//     } else {
-//       Content.display = "none";
-//     }
-//   };
-
-const Checkbox = () => {
-  return (
-    <>
-      <input type="checkbox" name="seeText" value="seeText"></input>
-    </>
-  );
-};
 
 export const CollapsibleText = () => {
   const [seeText, setSeeText] = React.useState(false);
+  const [seeForm, setSeeForm] = React.useState(false);
   const handleSeeText = () => {
     setSeeText(!seeText);
     console.log("activated");
   };
+  const handleSeeForm = () => {
+    setSeeForm(!seeForm);
+  };
   return (
     <>
-      <Button onClick={() => handleSeeText()}>Delivery</Button>
-      {seeText ? (
-        <Content>
-          <h1>Hello!</h1>
-        </Content>
-      ) : null}
+      <Content>
+        <Button onClick={() => handleSeeText()}>Delivery</Button>
+        {seeText ? (
+          <Content>
+            <p>
+              FREE Standard Delivery on orders over £30 as well as available
+              express delivery options. Please allow up to 5 working Days.
+            </p>
+          </Content>
+        ) : null}
+      </Content>
+      <Content>
+        <Button onClick={() => handleSeeForm()}>Returns</Button>
+        {seeForm ? (
+          <Content>
+            <p>
+              You can return items within 28 days of receipt of your order. As
+              always, we offer a range of FREE and easy ways to return including
+              contactless collection from your home. <br />
+              To start a return, please fill in the form below.
+            </p>
+            <ReturnsForm />
+          </Content>
+        ) : null}
+      </Content>
     </>
   );
-
-  //   return (
-  //     <>
-  //       <Checkbox
-  //         type="checkbox"
-  //         name="seeText"
-  //         onChange={handleSeeText}
-  //       ></Checkbox>
-  //       {seeText ? (
-  //         <div>
-  //           <label htmlFor="seeText">Hi there</label>
-  //         </div>
-  //       ) : null}
-  //     </>
-  //   );
 };
 
 export default CollapsibleText;
