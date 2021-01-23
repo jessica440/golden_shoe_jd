@@ -3,13 +3,23 @@ import styled from "styled-components";
 import ReturnsForm from "../components/Form";
 
 const Button = styled.button`
-  font-size: 1rem;
+  font-family: var(--info-font);
+  font-size: 1.5rem;
   font-weight: bold;
+  width: 90vw;
+  background-color: var(--colour-2);
+  border: none;
+  padding: 0.3rem;
+  margin: 1rem;
+  &:hover {
+    background-color: var(--colour-1);
+  }
 `;
 
 export const Content = styled.div`
   font-size: 1rem;
   padding: 1rem;
+  text-align: center;
 `;
 
 export const CollapsibleText = () => {

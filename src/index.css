@@ -13,7 +13,7 @@
   --colour-4: hsl(0, 0%, 26.7%);
 
   /* white */
-  --colour-5: hsl(0, 0%, 100%);
+  /* --colour-5: hsl(0, 0%, 100%); */
 
   /* black */
   --colour-6: hsl(0, 0%, 5.9%);
@@ -36,6 +36,7 @@ h1 {
 
 p {
   font-family: var(--info-font);
+  font-size: 1.2rem;
 }
 
 body {
