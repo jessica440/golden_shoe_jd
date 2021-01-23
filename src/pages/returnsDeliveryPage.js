@@ -9,9 +9,9 @@ const DeliveryReturns = () => {
     <>
       <NavBar />
       <Container>
-        <Content>
+        {/* <Content>
           <h1>Delivery / Returns</h1>
-        </Content>
+        </Content> */}
         <CollapsibleText />
       </Container>
     </>

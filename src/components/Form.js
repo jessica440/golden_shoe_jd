@@ -10,10 +10,10 @@ export const Container = styled.div`
 `;
 
 const Button = styled.button`
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-family: var(--title-font);
   font-weight: bold;
-  width: 300px;
+  width: 260px;
   padding: 0.5rem;
 `;
 
@@ -80,7 +80,7 @@ const Select = styled.select`
 // `;
 
 const Form = styled.form`
-  width: 200px;
+  width: 300px;
   margin: 5vh auto;
   display: flex;
   justify-content: center;
