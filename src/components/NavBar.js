@@ -12,13 +12,10 @@ const StyledNavBar = styled.nav`
   list-style-type: none;
   margin-bottom: 4rem;
   width: 100%;
-
-  /* display: flex;
-  @media (max-width: 1035px) {
+  @media only screen and (max-width: 918px) {
+    display: flex;
     flex-direction: column;
-  } */
-  /* display: flex;
-  justify-content: space-evenly; */
+  }
 `;
 
 const Ul = styled.ul`
@@ -30,13 +27,22 @@ const Li = styled.li`
   font-size: 2rem;
   list-style-type: none;
   display: inline-block;
-  padding-left: 8rem;
+  padding-left: 4rem;
   color: var(--colour-2);
+  @media only screen and (max-width: 918px) {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
 `;
 
 const InlineDiv = styled.div`
   display: flex;
   justify-content: space-evenly;
+`;
+
+const Icons = styled.div`
+  padding: 0.8rem;
 `;
 
 const Img = styled.img`
@@ -47,10 +53,12 @@ const NavBar = () => {
   return (
     <ThemeProvider theme={navBarTheme}>
       <StyledNavBar>
-        <Link to="/basket">
-          <Img src={Basket} />
-        </Link>
-        <Img src={Search} />
+        <Icons>
+          <Link to="/basket">
+            <Img src={Basket} />
+          </Link>
+          <Img src={Search} />
+        </Icons>
         <InlineDiv>
           <Ul>
             <Li>

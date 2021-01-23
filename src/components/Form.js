@@ -5,12 +5,16 @@ import { returns } from "../api/api";
 
 export const Container = styled.div`
   padding: 3rem;
+  align-items: center;
   text-align: center;
 `;
 
 const Button = styled.button`
   font-size: 1rem;
+  font-family: var(--title-font);
   font-weight: bold;
+  width: 260px;
+  padding: 0.5rem;
 `;
 
 const InfoButton = styled.button`
@@ -24,27 +28,23 @@ export const Fieldset = styled.fieldset`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  /* border-color: ${(props) => props.theme.formColor}; */
 `;
 
 const Label = styled.label`
   font-family: var(--info-font);
   font-size: 1.2rem;
   margin-top: 1rem;
-  /* color: ${(props) => props.theme.labelColor}; */
 `;
 
 const Input = styled.input`
-  /* font-family: var(--info-font); */
+  font-family: var(--info-font);
   margin: 1ch;
   font-size: 1.2rem;
   padding: 0.2rem;
-  /* color: ${(props) => props.theme.formColor}; */
   background: transparent;
   border-radius: 5px;
   text-align: center;
-  /* border-color: ${(props) => props.theme.formColor};
-  scrollbar-arrow-color: ${(props) => props.theme.formColor}; */
+  border-color: var(--colour-1);
 `;
 
 const Select = styled.select`
@@ -80,7 +80,7 @@ const Select = styled.select`
 // `;
 
 const Form = styled.form`
-  width: 60%;
+  width: 300px;
   margin: 5vh auto;
   display: flex;
   justify-content: center;

@@ -16,7 +16,7 @@ function request(path, options) {
 function returns(orderNumber, quantity, reason) {
   console.log(url);
 
-  return fetch(`${url}returnOrder`, {
+  return request(`${url}returnOrder`, {
     method: "POST",
     body: JSON.stringify({
       orderNumber: orderNumber,

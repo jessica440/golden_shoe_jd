@@ -13,12 +13,12 @@
   --colour-4: hsl(0, 0%, 26.7%);
 
   /* white */
-  --colour-5: hsl(0, 0%, 100%);
+  /* --colour-5: hsl(0, 0%, 100%); */
 
   /* black */
   --colour-6: hsl(0, 0%, 5.9%);
 
-  --title-font: "Lato", sans-serif;
+  --title-font: "Yusei Magic", sans-serif;
   --info-font: "Roboto", sans-serif;
 }
 
@@ -32,10 +32,12 @@
 
 h1 {
   font-family: var(--info-font);
+  font-size: 1.8rem;
 }
 
 p {
   font-family: var(--info-font);
+  font-size: 1.2rem;
 }
 
 body {
