@@ -12,14 +12,10 @@ const StyledNavBar = styled.nav`
   list-style-type: none;
   margin-bottom: 4rem;
   width: 100%;
-
-  /* display: flex; */
   @media only screen and (max-width: 918px) {
     display: flex;
     flex-direction: column;
   }
-  /* display: flex;
-  justify-content: space-evenly; */
 `;
 
 const Ul = styled.ul`

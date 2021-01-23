@@ -5,13 +5,20 @@ import { Container } from "./../components/Form";
 // import { returns } from "../api/api";
 import Label from "../images/returnsLabel.png";
 
+const Img = styled.img`
+  width: 450px;
+  @media only screen and (max-width: 590px) {
+    width: 300px;
+  }
+`;
+
 const ReturnsLabel = () => {
   return (
     <>
       <NavBar />
       <Container>
         <h1>Print Out Label</h1>
-        <img src={Label} />
+        <Img src={Label} />
       </Container>
     </>
   );

@@ -4,7 +4,7 @@ import ReturnsForm from "../components/Form";
 
 const Button = styled.button`
   font-family: var(--info-font);
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   width: 90vw;
   background-color: var(--colour-2);
@@ -19,7 +19,7 @@ const Button = styled.button`
 export const Content = styled.div`
   font-size: 1rem;
   padding: 1rem;
-  text-align: center;
+  /* text-align: center; */
 `;
 
 export const CollapsibleText = () => {

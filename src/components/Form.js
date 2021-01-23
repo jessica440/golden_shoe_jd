@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 const Button = styled.button`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-family: var(--title-font);
   font-weight: bold;
   width: 300px;
