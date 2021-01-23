@@ -30,8 +30,9 @@ const Li = styled.li`
   font-size: 2rem;
   list-style-type: none;
   display: inline-block;
-  padding-left: 8rem;
+  padding-left: 4rem;
   color: var(--colour-2);
+  text-decoration: none;
 `;
 
 const InlineDiv = styled.div`
