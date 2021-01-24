@@ -22,14 +22,6 @@
   --info-font: "Roboto", sans-serif;
 }
 
-/* body {
-  background-color: var(--background-clr);
-  text-align: center;
-  margin: 0;
-  -webkit-font-smoothing: antiagented;
-  -moz-osx-font-smoothing: grayscale;
-} */
-
 h1 {
   font-family: var(--info-font);
   font-size: 1.8rem;
@@ -43,14 +35,4 @@ p {
 
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
