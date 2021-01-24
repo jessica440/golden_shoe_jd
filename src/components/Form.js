@@ -55,30 +55,6 @@ const Select = styled.select`
   text-align: center;
 `;
 
-// const Select = styled.select`
-//   font-family: var(--info-font);
-//   margin: 1rem;
-//   font-size: 1.2rem;
-//   padding: 0.2rem;
-//   /* color: ${(props) => props.theme.formColor}; */
-//   background: transparent;
-//   border-radius: 5px;
-//   text-align: center;
-//   /* border-color: ${(props) => props.theme.formColor}; */
-// `;
-
-// const Option = styled.option``;
-// //   background-color: ${(props) => props.theme.optionColor};
-// //   color: ${(props) => props.theme.btnTextColor};
-// // `;
-
-// const ErrorDiv = styled.div`
-//   /* font-family: var(--info-font);
-//   color: ${(props) => props.theme.errorMessageColor}; */
-//   margin-left: 1ch;
-//   margin-right: 1ch;
-// `;
-
 const Form = styled.form`
   width: 300px;
   margin: 5vh auto;
@@ -86,6 +62,28 @@ const Form = styled.form`
   justify-content: center;
   flex-direction: column;
 `;
+
+export const ContactForm = () => {
+  return (
+    <>
+      <Form>
+        <Fieldset>
+          <Label htmlFor="name">Your Name:</Label>
+          <Input id="name" type="text" maxLength="30" required />
+          <Label htmlFor="email">Your Email:</Label>
+          <Input id="email" type="text" maxLength="30" required />
+          <Label htmlFor="message">Message:</Label>
+          <Input id="message" type="text" maxLength="300" required />
+          <p>How would you like us to get back in touch?</p>
+          <Input id="phone" type="radio" value="phone" required />
+          <Label htmlFor="phone">Telephone</Label>
+          <Input id="email" type="radio" value="email" required />
+          <Label htmlFor="email">Email</Label>
+        </Fieldset>
+      </Form>
+    </>
+  );
+};
 
 export const ReturnsForm = () => {
   const history = useHistory();
