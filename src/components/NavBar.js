@@ -10,12 +10,7 @@ const StyledNavBar = styled.nav`
   background-color: var(--colour-1);
   padding-bottom: 1rem;
   list-style-type: none;
-  /* margin-bottom: 4rem; */
   width: 100%;
-  /* @media only screen and (max-width: 918px) {
-    display: flex;
-    flex-direction: column; */
-  }
 `;
 
 const Ul = styled.ul`
@@ -24,7 +19,7 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   font-family: var(--title-font);
-  font-color: var(--colour-6);
+  color: var(--colour-6);
   font-size: 2rem;
   list-style-type: none;
   display: inline-block;
@@ -63,22 +58,34 @@ const NavBar = () => {
         <InlineDiv>
           <Ul>
             <Li>
-              <Link style={{ textDecoration: "none" }} to="/">
+              <Link
+                style={{ textDecoration: "none", color: "var(--colour-6)" }}
+                to="/"
+              >
                 HOME
               </Link>
             </Li>
             <Li>
-              <Link style={{ textDecoration: "none" }} to="/products">
+              <Link
+                style={{ textDecoration: "none", color: "var(--colour-6)" }}
+                to="/products"
+              >
                 PRODUCTS
               </Link>
             </Li>
             <Li>
-              <Link style={{ textDecoration: "none" }} to="/deliveryreturns">
+              <Link
+                style={{ textDecoration: "none", color: "var(--colour-6)" }}
+                to="/deliveryreturns"
+              >
                 DELIVERY / RETURNS
               </Link>
             </Li>
             <Li>
-              <Link style={{ textDecoration: "none" }} to="/contact">
+              <Link
+                style={{ textDecoration: "none", color: "var(--colour-6)" }}
+                to="/contact"
+              >
                 CONTACT
               </Link>
             </Li>
