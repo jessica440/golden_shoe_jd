@@ -24,6 +24,7 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   font-family: var(--title-font);
+  font-color: var(--colour-6);
   font-size: 2rem;
   list-style-type: none;
   display: inline-block;
