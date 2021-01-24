@@ -8,13 +8,13 @@ import Search from "../images/searchIcon.svg";
 
 const StyledNavBar = styled.nav`
   background-color: var(--colour-1);
-  padding: 0;
+  padding-bottom: 1rem;
   list-style-type: none;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
   width: 100%;
-  @media only screen and (max-width: 918px) {
+  /* @media only screen and (max-width: 918px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
   }
 `;
 
@@ -62,16 +62,24 @@ const NavBar = () => {
         <InlineDiv>
           <Ul>
             <Li>
-              <Link to="/">HOME</Link>
+              <Link style={{ textDecoration: "none" }} to="/">
+                HOME
+              </Link>
             </Li>
             <Li>
-              <Link to="/products">PRODUCTS</Link>
+              <Link style={{ textDecoration: "none" }} to="/products">
+                PRODUCTS
+              </Link>
             </Li>
             <Li>
-              <Link to="/deliveryreturns">DELIVERY / RETURNS</Link>
+              <Link style={{ textDecoration: "none" }} to="/deliveryreturns">
+                DELIVERY / RETURNS
+              </Link>
             </Li>
             <Li>
-              <Link to="/contact">CONTACT</Link>
+              <Link style={{ textDecoration: "none" }} to="/contact">
+                CONTACT
+              </Link>
             </Li>
           </Ul>
         </InlineDiv>
