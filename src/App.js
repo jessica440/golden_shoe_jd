@@ -8,6 +8,7 @@ import ReturnsLabel from "./pages/returnsLabel";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NotFoundPage from "./pages/pageNotFound";
 import Faqs from "./pages/faq";
+import ThankYou from "./pages/thankyou";
 import Basket from "./pages/basket";
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/faqs" exact>
           <Faqs />
+        </Route>
+        <Route path="/thankyou" exact>
+          <ThankYou />
         </Route>
         <Route path="/label" exact>
           <ReturnsLabel />

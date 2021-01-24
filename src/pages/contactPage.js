@@ -18,6 +18,10 @@ const Contact = () => {
           <Link to="/faqs">Frequently Asked Questions.</Link>
         </p>
         <ContactForm />
+        <p>
+          Our customer service helpline is also open between 9am-5pm
+          Monday-Friday <br /> (+44) 20 123 4567
+        </p>
       </Container>
     </>
   );

@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 const Button = styled.button`
   font-size: 1rem;
-  font-family: var(--title-font);
+  font-family: var(--info-font);
   font-weight: bold;
   width: 260px;
   padding: 0.5rem;
@@ -64,22 +64,59 @@ const Form = styled.form`
 `;
 
 export const ContactForm = () => {
+  const history = useHistory();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const contactForm = {
+      reason: event.target.elements.reason.value,
+      name: event.target.elements.name.value,
+      email: event.target.elements.email.value,
+      message: event.target.elements.message.value,
+      contact: event.target.elements.contact.value,
+    };
+    console.log("contact form", contactForm);
+    history.push("/thankyou");
+  };
   return (
     <>
-      <Form>
+      <Form
+        onSubmit={(event) => handleSubmit(event)}
+        style={{ width: "500px" }}
+      >
         <Fieldset>
+          <Label htmlFor="reason">What are you contacting us about?</Label>
+          <Select id="reason" name="reason">
+            <option value="hello">Just to say hi!</option>
+            <option value="compliment">Compliment</option>
+            <option value="complaint">Complaint</option>
+            <option value="product">Product query</option>
+            <option value="order">Order query</option>
+            <option value="other">Other</option>
+          </Select>
           <Label htmlFor="name">Your Name:</Label>
           <Input id="name" type="text" maxLength="30" required />
           <Label htmlFor="email">Your Email:</Label>
           <Input id="email" type="text" maxLength="30" required />
           <Label htmlFor="message">Message:</Label>
-          <Input id="message" type="text" maxLength="300" required />
-          <p>How would you like us to get back in touch?</p>
-          <Input id="phone" type="radio" value="phone" required />
-          <Label htmlFor="phone">Telephone</Label>
-          <Input id="email" type="radio" value="email" required />
-          <Label htmlFor="email">Email</Label>
+          <Input
+            id="message"
+            type="text"
+            maxLength="300"
+            required
+            style={{ height: "100px" }}
+          />
+          <Label htmlFor="reason">
+            How would you like us to get back in touch?
+          </Label>
+          <Select id="contact" name="contact">
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>
+          </Select>
         </Fieldset>
+        <Container>
+          <Button>SEND MESSAGE</Button>
+        </Container>
       </Form>
     </>
   );
@@ -98,7 +135,7 @@ export const ReturnsForm = () => {
     };
 
     returns(returnsForm);
-    console.log(returnsForm);
+    console.log("returns form", returnsForm);
 
     history.push("/label");
   };
