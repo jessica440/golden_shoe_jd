@@ -144,6 +144,7 @@ export const ReturnsForm = () => {
           <option value="multiple">Ordered multiple sizes</option>
           <option value="fit">Didn't fit</option>
           <option value="dislike">Didn't like</option>
+          <option value="other">Other</option>
         </Select>
       </Fieldset>
       <Container>
