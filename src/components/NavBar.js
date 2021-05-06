@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { navBarTheme } from "./themes";
-import { ThemeProvider } from "styled-components";
 import Basket from "../images/basketicon.svg";
 import Search from "../images/searchIcon.svg";
 
@@ -20,7 +18,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   font-family: var(--title-font);
   color: var(--colour-6);
-  font-size: 2rem;
+  font-size: 1.5rem;
   list-style-type: none;
   display: inline-block;
   padding-left: 4rem;
@@ -38,61 +36,59 @@ const InlineDiv = styled.div`
 `;
 
 const Icons = styled.div`
-  padding: 0.8rem;
+  padding: 0.5rem;
 `;
 
 const Img = styled.img`
-  padding: 1rem;
+  padding: 0.5rem;
 `;
 
 const NavBar = () => {
   return (
-    <ThemeProvider theme={navBarTheme}>
-      <StyledNavBar>
-        <Icons>
-          <Link to="/basket">
-            <Img src={Basket} />
-          </Link>
-          <Img src={Search} />
-        </Icons>
-        <InlineDiv>
-          <Ul>
-            <Li>
-              <Link
-                style={{ textDecoration: "none", color: "var(--colour-6)" }}
-                to="/"
-              >
-                HOME
-              </Link>
-            </Li>
-            <Li>
-              <Link
-                style={{ textDecoration: "none", color: "var(--colour-6)" }}
-                to="/products"
-              >
-                PRODUCTS
-              </Link>
-            </Li>
-            <Li>
-              <Link
-                style={{ textDecoration: "none", color: "var(--colour-6)" }}
-                to="/deliveryreturns"
-              >
-                DELIVERY / RETURNS
-              </Link>
-            </Li>
-            <Li>
-              <Link
-                style={{ textDecoration: "none", color: "var(--colour-6)" }}
-                to="/contact"
-              >
-                CONTACT
-              </Link>
-            </Li>
-          </Ul>
-        </InlineDiv>
-      </StyledNavBar>
-    </ThemeProvider>
+    <StyledNavBar>
+      <Icons>
+        <Link to="/basket">
+          <Img src={Basket} />
+        </Link>
+        <Img src={Search} />
+      </Icons>
+      <InlineDiv>
+        <Ul>
+          <Li>
+            <Link
+              style={{ textDecoration: "none", color: "var(--colour-6)" }}
+              to="/"
+            >
+              HOME
+            </Link>
+          </Li>
+          <Li>
+            <Link
+              style={{ textDecoration: "none", color: "var(--colour-6)" }}
+              to="/products"
+            >
+              PRODUCTS
+            </Link>
+          </Li>
+          <Li>
+            <Link
+              style={{ textDecoration: "none", color: "var(--colour-6)" }}
+              to="/deliveryreturns"
+            >
+              DELIVERY / RETURNS
+            </Link>
+          </Li>
+          <Li>
+            <Link
+              style={{ textDecoration: "none", color: "var(--colour-6)" }}
+              to="/contact"
+            >
+              CONTACT
+            </Link>
+          </Li>
+        </Ul>
+      </InlineDiv>
+    </StyledNavBar>
   );
 };
 
