@@ -9,9 +9,7 @@ const HomePage = () => {
     <>
       <NavBar />
       <HomeImage />
-      <Container>
-        <h1>Home Page</h1>
-      </Container>
+      <Container></Container>
     </>
   );
 };

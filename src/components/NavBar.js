@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Basket from "../images/basketicon.svg";
 import Search from "../images/searchIcon.svg";
 
-const StyledNavBar = styled.nav`
+const StyledNavBar = styled.div`
   background-color: var(--colour-1);
   padding-bottom: 1rem;
   list-style-type: none;

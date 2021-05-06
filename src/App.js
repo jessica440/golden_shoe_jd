@@ -1,5 +1,3 @@
-// import basket from "./images/basketicon";
-import "./App.css";
 import HomePage from "./pages/homePage";
 import { Products } from "./pages/productPage";
 import Contact from "./pages/contactPage";
