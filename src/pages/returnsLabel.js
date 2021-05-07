@@ -3,7 +3,7 @@ import styled from "styled-components";
 import NavBar from "./../components/NavBar";
 import { Container } from "./../components/Form";
 
-import Label from "../images/returnsLabel.png";
+import Label from "../icons/returnsLabel.png";
 
 const Img = styled.img`
   width: 450px;

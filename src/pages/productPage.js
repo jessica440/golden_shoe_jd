@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import NavBar from "./../components/NavBar";
 import { shoes } from "../data/shoeData";
 import { Shoe, ShoeGrid, ShoeLabel } from "../components/ShoeGrid";
