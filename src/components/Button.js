@@ -12,7 +12,8 @@ const Button = styled.button`
   padding: 0.3rem;
   margin: 1rem;
   &:hover {
-    background-color: var(--colour-1);
+    border-bottom: 1.5px;
+    box-shadow: 5px 5px 4px hsl(0, 0%, 80.8%);
   }
 `;
 

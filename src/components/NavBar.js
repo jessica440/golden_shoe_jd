@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Basket from "../images/basketicon.svg";
-import Search from "../images/searchIcon.svg";
+import Basket from "../icons/basketicon.svg";
+import Search from "../icons/searchIcon.svg";
 
 const StyledNavBar = styled.div`
-  background-color: var(--colour-1);
+  background-color: var(--colour-2);
   padding-bottom: 1rem;
   list-style-type: none;
   width: 100%;
+  border-bottom: 1.5px;
+  box-shadow: 5px 5px 4px hsl(0, 0%, 80.8%);
 `;
 
 const Ul = styled.ul`
@@ -18,7 +20,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   font-family: var(--title-font);
   color: var(--colour-6);
-  font-size: 1.5rem;
+  font-size: 1rem;
   list-style-type: none;
   display: inline-block;
   padding-left: 4rem;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import NavBar from "./../components/NavBar";
 import { shoes } from "../data/shoeData";
-import { Shoe, ShoeGrid } from "../components/ShoeGrid";
+import { Shoe, ShoeGrid, ShoeLabel } from "../components/ShoeGrid";
 
 export const Products = () => {
   return (
@@ -16,6 +16,7 @@ export const Products = () => {
             {shoes.map((shoes) => (
               <Shoe img={shoes.img}>{shoes.name}</Shoe>
             ))}
+            <ShoeLabel>{shoes.price}</ShoeLabel>
           </ShoeGrid>
         </>
       ))}
