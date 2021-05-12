@@ -5,12 +5,14 @@ import Basket from "../icons/basketicon.svg";
 import Search from "../icons/searchIcon.svg";
 
 const StyledNavBar = styled.div`
-  background-color: var(--colour-2);
-  padding-bottom: 1rem;
+  /* background-color: var(--colour-2); */
+  background-image: linear-gradient(var(--colour-2) 90%, var(--colour-1));
+  /* box-shadow: 0px -28px 30px 0px var(--colour-1); */
+  padding-bottom: 0.2rem;
   list-style-type: none;
   width: 100%;
   border-bottom: 1.5px;
-  box-shadow: 5px 5px 4px hsl(0, 0%, 80.8%);
+  /* box-shadow: 5px 5px 4px hsl(0, 0%, 80.8%); */
 `;
 
 const Ul = styled.ul`
@@ -42,7 +44,7 @@ const Icons = styled.div`
 `;
 
 const Img = styled.img`
-  padding: 0.5rem;
+  padding-left: 1rem;
 `;
 
 const NavBar = () => {
