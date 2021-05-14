@@ -9,7 +9,4 @@ export const Info = styled.div`
   font-weight: 400;
 `;
 
-// --title-font: "Yusei Magic", sans-serif;
-// --info-font: "Roboto", sans-serif;
-
 export default Title;
