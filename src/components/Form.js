@@ -12,10 +12,12 @@ export const Container = styled.div`
 
 const Button = styled.button`
   font-size: 1rem;
-  font-family: var(--info-font);
-  font-weight: bold;
+  font-family: var(--title-font);
+  /* font-weight: bold; */
   width: 260px;
+  border-radius: 5px;
   padding: 0.5rem;
+  background-color: var(--colour-2);
 `;
 
 const InfoButton = styled.button`
@@ -23,7 +25,7 @@ const InfoButton = styled.button`
 `;
 
 export const Fieldset = styled.fieldset`
-  border-style: solid;
+  border-style: none;
   padding: 0.75rem;
   border-radius: 5px;
   display: flex;
