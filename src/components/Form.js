@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import { returns } from "../api/api";
+// import { returns } from "../api/api";
 
 export const Container = styled.div`
   padding: 3rem;
   align-items: center;
   text-align: center;
+  z-index: 9;
 `;
 
 const Button = styled.button`
@@ -41,7 +42,7 @@ const Input = styled.input`
   margin: 1ch;
   font-size: 1.2rem;
   padding: 0.2rem;
-  background: transparent;
+  background: white;
   border-radius: 5px;
   text-align: center;
   border-color: var(--colour-1);
@@ -134,7 +135,7 @@ export const ReturnsForm = () => {
       reason: event.target.elements.reason.value,
     };
 
-    returns(returnsForm);
+    // returns(returnsForm);
     console.log("returns form", returnsForm);
 
     history.push("/label");

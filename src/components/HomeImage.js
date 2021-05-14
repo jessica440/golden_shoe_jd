@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Shoes from "../images/shoe_image.png";
+import Shoes from "../icons/shoe_image.png";
 
 const Img = styled.img`
   width: 100vw;

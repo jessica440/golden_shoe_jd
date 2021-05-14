@@ -1,7 +1,7 @@
 :root {
   /* root colours and fonts go there */
   /* light grey */
-  --colour-1: hsl(0, 0%, 89%);
+  --colour-1: hsl(60, 2%, 91%);
 
   /* white */
   --colour-2: hsl(0, 0%, 100%);
@@ -20,15 +20,16 @@
 
   --title-font: "Yusei Magic", sans-serif;
   --info-font: "Roboto", sans-serif;
+  --label-font: "Newsreader", serif;
 }
 
 h1 {
-  font-family: var(--info-font);
+  font-family: var(--label-font);
   font-size: 1.8rem;
 }
 
 p {
-  font-family: var(--info-font);
+  font-family: var(--label-font);
   font-size: 1.2rem;
   padding: 1.2rem;
 }

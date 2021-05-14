@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Basket from "../images/basketicon.svg";
-import Search from "../images/searchIcon.svg";
+import Basket from "../icons/basketicon.svg";
+import Search from "../icons/searchIcon.svg";
+import GoldenShoe from "../icons/goldenShoe.png";
 
 const StyledNavBar = styled.div`
-  background-color: var(--colour-1);
-  padding-bottom: 1rem;
+  /* background-color: var(--colour-2); */
+  background-image: linear-gradient(var(--colour-2) 90%, var(--colour-1));
+  /* box-shadow: 0px -28px 30px 0px var(--colour-1); */
+  padding-bottom: 0.2rem;
   list-style-type: none;
   width: 100%;
+  border-bottom: 1.5px;
+  /* box-shadow: 5px 5px 4px hsl(0, 0%, 80.8%); */
 `;
 
 const Ul = styled.ul`
@@ -18,7 +23,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   font-family: var(--title-font);
   color: var(--colour-6);
-  font-size: 1.5rem;
+  font-size: 1rem;
   list-style-type: none;
   display: inline-block;
   padding-left: 4rem;
@@ -40,8 +45,28 @@ const Icons = styled.div`
 `;
 
 const Img = styled.img`
-  padding: 0.5rem;
+  padding-left: 1rem;
 `;
+
+const ImgDiv = styled(Link)`
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledLogo = styled.img`
+  width: 350px;
+  margin-top: -2rem;
+`;
+
+const Logo = () => {
+  return (
+    <>
+      <ImgDiv to="/">
+        <StyledLogo src={GoldenShoe} />
+      </ImgDiv>
+    </>
+  );
+};
 
 const NavBar = () => {
   return (
@@ -52,6 +77,7 @@ const NavBar = () => {
         </Link>
         <Img src={Search} />
       </Icons>
+      <Logo />
       <InlineDiv>
         <Ul>
           <Li>

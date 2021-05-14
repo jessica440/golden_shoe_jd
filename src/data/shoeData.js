@@ -1,7 +1,7 @@
 export const shoeItems = [
   {
     name: "Platforms",
-    img: "/shoeImgs/platform.jpng",
+    img: "/shoeImgs/platform.png",
     section: "Flats",
   },
   {
