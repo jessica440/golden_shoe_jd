@@ -4,11 +4,12 @@ import { Title } from "../styles/fonts";
 export const ShoeGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 1rem;
+  gap: 35px;
+  margin: 1.5rem;
 `;
 
-export const Shoe = styled(Title)`
+export const Shoe = styled.h1`
+  font-family: var(--label-font);
   height: 300px;
   min-width: 200px;
   padding: 10px;
@@ -35,5 +36,7 @@ export const Shoe = styled(Title)`
 
 export const ShoeLabel = styled.p`
   background-color: rgba(256, 256, 256, 0.8);
-  padding: 20px;
+  padding-left: 25px;
+  font-family: var(--label-font);
+  font-size: 1.5rem;
 `;

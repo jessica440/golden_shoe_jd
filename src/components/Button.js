@@ -3,9 +3,9 @@ import styled from "styled-components";
 import ReturnsForm from "../components/Form";
 
 const Button = styled.button`
-  font-family: var(--info-font);
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-family: var(--label-font);
+  font-size: 2rem;
+  /* font-weight: bold; */
   width: 90vw;
   background-color: var(--colour-2);
   border: none;

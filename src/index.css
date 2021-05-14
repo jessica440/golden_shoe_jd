@@ -20,15 +20,16 @@
 
   --title-font: "Yusei Magic", sans-serif;
   --info-font: "Roboto", sans-serif;
+  --label-font: "Newsreader", serif;
 }
 
 h1 {
-  font-family: var(--info-font);
+  font-family: var(--label-font);
   font-size: 1.8rem;
 }
 
 p {
-  font-family: var(--info-font);
+  font-family: var(--label-font);
   font-size: 1.2rem;
   padding: 1.2rem;
 }

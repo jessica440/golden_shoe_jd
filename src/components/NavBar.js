@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Basket from "../icons/basketicon.svg";
 import Search from "../icons/searchIcon.svg";
+import GoldenShoe from "../icons/goldenShoe.png";
 
 const StyledNavBar = styled.div`
   /* background-color: var(--colour-2); */
@@ -47,6 +48,26 @@ const Img = styled.img`
   padding-left: 1rem;
 `;
 
+const ImgDiv = styled(Link)`
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledLogo = styled.img`
+  width: 350px;
+  margin-top: -2rem;
+`;
+
+const Logo = () => {
+  return (
+    <>
+      <ImgDiv to="/">
+        <StyledLogo src={GoldenShoe} />
+      </ImgDiv>
+    </>
+  );
+};
+
 const NavBar = () => {
   return (
     <StyledNavBar>
@@ -56,6 +77,7 @@ const NavBar = () => {
         </Link>
         <Img src={Search} />
       </Icons>
+      <Logo />
       <InlineDiv>
         <Ul>
           <Li>
