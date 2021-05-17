@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-
 import NavBar from "./../components/NavBar";
 import { Container } from "./../components/Form";
 import { CollapsibleText } from "./../components/Button";
 import Trainers from "../icons/trainersBackground.jpg";
-// import { Img } from "./contactPage.js";
 
 export const Img = styled.img`
   width: 100vw;

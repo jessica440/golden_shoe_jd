@@ -11,12 +11,6 @@ const Info = styled.div`
   right: 0;
 `;
 
-// const Banner = styled.div`
-//   min-height: 200px;
-//   margin-bottom: 20px;
-//   ${({ img }) => `background-image: url(${img})`}
-// `;
-
 const InfoShadow = styled.div`
   position: fixed;
   height: 100%;
