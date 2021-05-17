@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Title } from "../styles/fonts";
 
 export const ShoeGrid = styled.div`
   display: grid;
